@@ -1,0 +1,1 @@
+# SHACL_validation_of_properties_based_on_DT_and_LOIN
