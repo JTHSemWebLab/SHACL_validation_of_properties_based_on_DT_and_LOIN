@@ -1,0 +1,79 @@
+@prefix setemp:  <https://example.org/setemp#> .
+@prefix setempw: <https://example.org/setempw#> .
+@prefix tempo:   <https://w3id.org/tempo> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix windowtype:  <https://example.org/windowtypescheme#> .
+@prefix framematerial:  <https://example.org/framematerialscheme#> .
+
+
+#################################################################
+# HEADER
+#################################################################
+
+setemp:
+    a owl:Ontology ;
+    rdfs:label "SETEMP Ontology"@en ;
+    rdfs:comment "Suggested base ontology addition for Swedish data templates."@en .
+
+#################################################################
+# CLASSES
+#################################################################
+
+setemp:Property
+    a owl:Class ;
+    rdfs:label "Property"@en ;
+    rdfs:comment "A domain property that expects a value."@en ;
+    owl:equivalentClass tempo:Property .
+
+setemp:Value
+    a owl:Class ;
+    rdfs:label "Value"@en ;
+    rdfs:comment "Abstract superclass for all values."@en .
+
+setemp:QuantitativeValue
+    a owl:Class ;
+    rdfs:subClassOf setemp:Value , qudt:QuantityValue ;
+    rdfs:label "Quantitative Value"@en ;
+    rdfs:comment "A numeric value with unit, based on QUDT."@en .
+
+setemp:ControlledValue
+    a owl:Class ;
+    rdfs:subClassOf setemp:Value , skos:Concept ;
+    rdfs:label "Controlled Value"@en ;
+    rdfs:comment "A value selected from a controlled vocabulary (SKOS)."@en .
+
+#################################################################
+# PROPERTIES
+#################################################################
+
+# Unified value relation
+setemp:hasValue
+    a owl:ObjectProperty ;
+    rdfs:domain setemp:Property ;
+    rdfs:range setemp:Value ;
+    rdfs:label "has value"@en .
+
+# Value type expectation
+setemp:expectsValueType
+    a owl:ObjectProperty ;
+    rdfs:domain setemp:Property ;
+    rdfs:range setemp:Value ;
+    rdfs:label "expects value type"@en .
+
+# Controlled vocabulary scheme binding
+setemp:expectsScheme
+    a owl:ObjectProperty ;
+    rdfs:domain setemp:Property ;
+    rdfs:range skos:ConceptScheme ;
+    rdfs:label "expects concept scheme"@en .
+
+# Allowed numeric values (discrete constraints)
+setemp:allowedNumbers
+    a owl:DatatypeProperty ;
+    rdfs:domain setemp:Property ;
+    rdfs:range rdf:List ;
+    rdfs:label "allowed numbers"@en .

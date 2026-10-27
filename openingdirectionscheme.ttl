@@ -1,0 +1,38 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix openingdirection:  <https://example.org/openingdirectionscheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+openingdirection:OpeningDirectionScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "List of opening directions"@en ;
+    rdfs:label "Opening direction"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+openingdirection:Outwards
+    a skos:Concept ;
+    skos:inScheme openingdirection:OpeningDirectionScheme ;
+    skos:notation "outwards" .
+
+openingdirection:Inwards
+    a skos:Concept ;
+    skos:inScheme openingdirection:OpeningDirectionScheme ;
+    skos:notation "inwards" .
+
+
+
+
+
+
+
+
+

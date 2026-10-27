@@ -1,0 +1,399 @@
+@prefix setemp:  <https://example.org/setemp#> .
+@prefix setempw: <https://example.org/setempw#> .
+@prefix tempo:   <https://w3id.org/tempo> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix windowtype:  <https://example.org/windowtypescheme#> .
+@prefix framematerial:  <https://example.org/framematerialscheme#> .
+@prefix shapes: <http://example.org/shapes/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix burglarresistance: <https://example.org/burglarresistancescheme#> .
+@prefix fireresistance: <https://example.org/fireresistancescheme#> .
+@prefix jambextension: <https://example.org/jambextensionscheme#> .
+@prefix openingdirection: <https://example.org/openingdirectionscheme#> .
+@prefix rotationaldirection: <https://example.org/rotationaldirectionscheme#> .
+
+#################################################################
+# QUANTITATIVE SHAPES (QUDT)
+#################################################################
+
+# --- Frame height ---
+shapes:FrameHeightShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Frame_Height ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Thermal transmittance ---
+shapes:ThermalTransmittanceShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Thermal_Transmittance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/W-PER-M2-K> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Frame depth ---
+shapes:FrameDepthShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Frame_Depth ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Exterior reveal depth ---
+shapes:ExteriorRevealDepthShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Exterior_Reveal_Depth ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Gross weight ---
+shapes:GrossWeightShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Gross_Weight ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/KiloGM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Net weight ---
+shapes:NetWeightShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Net_Weight ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/KiloGM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Opening width ---
+shapes:OpeningWidthShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Opening_Width ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Light transmittance ---
+shapes:LightTransmittanceShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Light_Transmittance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/UNITLESS> ;
+            ] ;
+        ] ;
+    ] .
+
+# --- Solar energy transmittance ---
+shapes:SolarEnergyTransmittanceShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Solar_Energy_Transmittance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node [
+            sh:class setemp:QuantitativeValue ;
+            sh:property [
+                sh:path qudt:numericValue ;
+                sh:datatype xsd:decimal ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+            ] ;
+            sh:property [
+                sh:path qudt:unit ;
+                sh:hasValue <http://qudt.org/vocab/unit/UNITLESS> ;
+            ] ;
+        ] ;
+    ] .
+
+
+#################################################################
+# CONTROLLED VOCABULARY SHAPES (SKOS)
+#################################################################
+
+# --- Frame material ---
+shapes:FrameMaterialShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Frame_Material ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue framematerial:FrameMaterialScheme ;
+        ] ;
+    ] .
+
+# --- Window type ---
+shapes:WindowTypeShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Window_Type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue windowtype:WindowTypeScheme ;
+        ] ;
+    ] .
+
+# --- Burglar resistance ---
+shapes:BurglarResistanceShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Burglar_Resistance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue burglarresistance:BurglarResistanceScheme ;
+        ] ;
+    ] .
+
+# --- Fire resistance ---
+shapes:FireResistanceShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Fire_Resistance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue fireresistance:FireResistanceScheme ;
+        ] ;
+    ] .
+
+# --- Jamb extension groove ---
+shapes:JambExtensionShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Jamb_Extension_Groove ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue jambextension:JambExtensionScheme ;
+        ] ;
+    ] .
+
+# --- Opening direction ---
+shapes:OpeningDirectionShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Opening_Direction ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue openingdirection:OpeningDirectionScheme ;
+        ] ;
+    ] .
+
+# --- Direction of rotation ---
+shapes:RotationalDirectionShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Rotational_Direction ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:property [
+            sh:path skos:inScheme ;
+            sh:hasValue rotationaldirection:RotationalDirectionScheme ;
+        ] ;
+    ] .
+
+
+#################################################################
+# NOMINAL SHAPES (STRINGS)
+#################################################################
+
+# --- Protection against cutting ---
+shapes:CuttingProtectionShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Cutting_Protection ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+    ] .
+
+# --- Interior colour ---
+shapes:InteriorColourShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Interior_Colour ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+    ] .
+
+# --- Exterior colour ---
+shapes:ExteriorColourShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Exterior_Colour ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+    ] .
+
+# --- Protection against cutting ---
+shapes:SoundInsulationShape
+    a sh:NodeShape ;
+    sh:targetClass setempw:Window ;
+    sh:property [
+        sh:path setempw:Sound_Insulation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+    ] .

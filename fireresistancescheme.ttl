@@ -1,0 +1,183 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix fireresistance:  <https://example.org/fireresistancescheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+fireresistance:FireResistanceScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "resistance to fire according to EN 13501-2"@en ;
+    rdfs:label "Fire resistance classes"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+fireresistance:EI1_30
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 30" .
+
+fireresistance:EI2_15
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 15" .
+
+fireresistance:EI2_20
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 20" .
+
+fireresistance:EI1_10
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 10" .
+
+fireresistance:EI1_20
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 20" .
+
+fireresistance:EW_30
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EW 30" .
+
+fireresistance:EI1_45
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 45" .
+
+fireresistance:EI2_45
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 45" .
+
+fireresistance:EI2_180
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 180" .
+
+fireresistance:EI2_240
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 240" .
+
+fireresistance:EI1_240
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 240" .
+
+fireresistance:EW_10
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EW 10" .
+
+fireresistance:EW_60
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EW 60" .
+
+fireresistance:E_60
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 60" .
+
+fireresistance:EI2_60
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 60" .
+    
+fireresistance:EI1_60
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 60" .
+
+fireresistance:EW_120
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EW 120" .
+
+fireresistance:EW_20
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EW 20" .
+
+fireresistance:EI2_120
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 120" .
+
+fireresistance:EI1_120
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 120" .
+
+fireresistance:E_10
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 10" .
+
+fireresistance:E_240
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 240" .
+
+fireresistance:E_120
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 120" .
+
+fireresistance:EI1_15
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 15" .
+
+fireresistance:EI2_10
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 10" .
+
+fireresistance:E_20
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 20" .
+
+fireresistance:E_180
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 180" .
+
+fireresistance:EI1_180
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI1 180" .
+
+fireresistance:E_45
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 45" .
+
+fireresistance:E_30
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 30" .
+
+fireresistance:EI2_30
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "EI2 30" .
+
+fireresistance:E_15
+    a skos:Concept ;
+    skos:inScheme fireresistance:FireResistanceScheme ;
+    skos:notation "E 15" .
+
+
+
+

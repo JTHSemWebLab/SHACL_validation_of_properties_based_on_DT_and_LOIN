@@ -1,0 +1,126 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix windowtype:  <https://example.org/windowtypescheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+windowtype:WindowTypeScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "List of window types"@en ;
+    rdfs:label "Window type"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+windowtype:Bottom_Hung_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Bottom-hung casement" .
+
+windowtype:Door_Height_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Door-height window" .
+
+windowtype:Double_Tilting_Sliding_Sash
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Double tilting sliding sash" .
+
+windowtype:Fixed_Light
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Fixed light" .
+
+windowtype:Fixed_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Fixed window" .
+
+windowtype:Fully_Reversible_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Fully reversible window" .
+
+windowtype:Horizontal_Pivot_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Horizontal pivot casement" .
+
+windowtype:Horizontal_Sliding_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Horizontal sliding window" .
+
+windowtype:Lifting_Sliding_Sash
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Lifting sliding sash" .
+
+windowtype:Louvred_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Louvred window" .
+
+windowtype:Parallel_Projecting_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Parallel projecting window" .
+
+windowtype:Scissors_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Scissors window" .
+
+windowtype:Side_Hung_Fully_reversible
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Side-hung fully reversible" .
+
+windowtype:Single_Side_Hung_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Single side-hung casement" .
+
+windowtype:Sliding_Folding_Window
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Sliding folding window" .
+
+windowtype:Sliding_Projecting_Side_Hung_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Sliding projecting side-hung casement" .
+
+windowtype:Sliding_Projecting_Top_Hung_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Sliding projecting top-hung casement" .
+
+windowtype:Tilt_Turn
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Tilt-turn" .
+
+windowtype:Top_Hung_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Top-hung casement" .
+
+windowtype:Vertical_Pivot_Casement
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Vertical pivot casement" .
+
+windowtype:Vertical_Sliding_Sash
+    a skos:Concept ;
+    skos:inScheme windowtype:WindowTypeScheme ;
+    skos:notation "Vertical sliding sash" .
+
+

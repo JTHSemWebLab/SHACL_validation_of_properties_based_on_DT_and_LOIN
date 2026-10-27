@@ -1,0 +1,106 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix jambextension:  <https://example.org/jambextensionscheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+jambextension:JambExtensionScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "List of possible Jamb Extension Groove types"@en ;
+    rdfs:label "Jamb Extension Groove"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+jambextension:No
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "no" .
+
+jambextension:Top
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top" .
+
+jambextension:Bottom
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "bottom" .
+
+jambextension:All_Sides
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "all sides" .
+
+jambextension:Right_Side
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "right side" .
+
+jambextension:Left_Side
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "left side" .
+
+jambextension:Top_Bottom
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top and bottom" .
+
+jambextension:Top_Right
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top and right side" .
+
+jambextension:Top_Left
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top and left side" .
+
+jambextension:Bottom_Right
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "bottom and right side" .
+
+jambextension:Top_Bottom_Left
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top, bottom and left side" .
+
+jambextension:Top_Both_Sides
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top and both sides" .
+
+jambextension:Bottom_Both_Sides
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "bottom and both sides" .
+
+jambextension:Bottom_Left
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "bottom and left side" .
+
+jambextension:Both_Sides
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "both sides" .
+
+jambextension:Top_Bottom_Right
+    a skos:Concept ;
+    skos:inScheme jambextension:JambExtensionScheme ;
+    skos:notation "top, bottom and right side" .
+
+
+
+
+
+
+

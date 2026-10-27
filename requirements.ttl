@@ -1,0 +1,30 @@
+@prefix req: <http://example.org/requirements/> .
+@prefix shapes: <http://example.org/shapes/> .
+@prefix loin: <https://w3id.org/loin#> .
+
+
+
+# Requirement set
+req:WindowLOIN_DetailDesign
+    a loin:SpecificationPerObjectType ;
+    loin:hasAlphanumericalInformation shapes:FrameMaterialShape ;
+    loin:hasAlphanumericalInformation shapes:WindowTypeShape ;
+    loin:hasAlphanumericalInformation shapes:FrameHeightShape ;
+    loin:hasAlphanumericalInformation shapes:CuttingProtectionShape ;
+    loin:hasAlphanumericalInformation shapes:BurglarResistanceShape ;
+    loin:hasAlphanumericalInformation shapes:InteriorColourShape ;
+    loin:hasAlphanumericalInformation shapes:ExteriorColourShape ;
+    loin:hasAlphanumericalInformation shapes:FrameDepthShape ;
+    loin:hasAlphanumericalInformation shapes:ExteriorRevealDepthShape ;
+    loin:hasAlphanumericalInformation shapes:JambExtensionShape ;
+    loin:hasAlphanumericalInformation shapes:GrossWeightShape ;
+    loin:hasAlphanumericalInformation shapes:NetWeightShape ;
+    loin:hasAlphanumericalInformation shapes:FrameHeightShape ;
+    loin:hasAlphanumericalInformation shapes:OpeningWidthShape ;
+    loin:hasAlphanumericalInformation shapes:OpeningDirectionShape ;
+    loin:hasAlphanumericalInformation shapes:LightTransmittanceShape ;
+    loin:hasAlphanumericalInformation shapes:SolarEnergyTransmittanceShape ;
+    loin:hasAlphanumericalInformation shapes:SoundInsulationShape ;
+    loin:hasAlphanumericalInformation shapes:RotationalDirectionShape ;
+    loin:hasAlphanumericalInformation shapes:FireResistanceShape .
+

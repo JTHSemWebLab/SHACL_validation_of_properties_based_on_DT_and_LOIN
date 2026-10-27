@@ -1,0 +1,206 @@
+@prefix setemp:  <https://example.org/setemp#> .
+@prefix setempw: <https://example.org/setempw#> .
+@prefix tempo:   <https://w3id.org/tempo#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix windowtype:  <https://example.org/windowtypescheme#> .
+@prefix framematerial:  <https://example.org/framematerialscheme#> .
+@prefix burglarresistance: <https://example.org/burglarresistancescheme#> .
+@prefix fireresistance: <https://example.org/fireresistancescheme#> .
+@prefix jambextension: <https://example.org/jambextensionscheme#> .
+@prefix openingdirection: <https://example.org/openingdirectionscheme#> .
+@prefix rotationaldirection: <https://example.org/rotationaldirectionscheme#> .
+
+
+#################################################################
+# HEADER
+#################################################################
+
+setempw:
+    a owl:Ontology ;
+    rdfs:label "setempw Ontology"@en ;
+    rdfs:comment "Resources based on a proposed Swedish data template for windows. Not intended for public use - contained resources are examples only."@en .
+
+#################################################################
+# CLASSES
+#################################################################
+
+setempw:Window rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/tempo#ObjectType> .
+
+
+#################################################################
+# INDIVIDUALS
+#################################################################
+
+setempw:WindowTemplate
+    a tempo:DataTemplate ;
+    tempo:isAssignedToObjectType setempw:Window .
+
+setempw:WindowTemplate
+    tempo:hasProperty setempw:Frame_Material ;
+    tempo:hasProperty setempw:Frame_Height ;
+    tempo:hasProperty setempw:Thermal_Transmittance ;
+    tempo:hasProperty setempw:Window_Type ;
+    tempo:hasProperty setempw:Cutting_Protection ;
+    tempo:hasProperty setempw:Burglar_Resistance ;
+    tempo:hasProperty setempw:Exterior_Colour ;
+    tempo:hasProperty setempw:Interior_Colour ;
+    tempo:hasProperty setempw:Frame_Depth ;
+    tempo:hasProperty setempw:Exterior_Reveal_Depth ;
+    tempo:hasProperty setempw:Jamb_Extension_Groove ;
+    tempo:hasProperty setempw:Gross_Weight ;
+    tempo:hasProperty setempw:Net_Weight ;
+    tempo:hasProperty setempw:Opening_Width ;
+    tempo:hasProperty setempw:Opening_Direction ;
+    tempo:hasProperty setempw:Light_Transmittance ;
+    tempo:hasProperty setempw:Solar_Energy_Transmittance ;
+    tempo:hasProperty setempw:Sound_Insulation ;
+    tempo:hasProperty setempw:Rotational_Direction ;
+    tempo:hasProperty setempw:Fire_Resistance .
+
+
+setempw:Frame_Material
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme framematerial:FrameMaterialScheme ;
+    tempo:definitionInLanguage "material from which the frame is manufactured"@en ;
+    rdfs:label "frame material"@en .
+
+setempw:Window_Type
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme windowtype:WindowTypeScheme ;
+    rdfs:label "window type according to EN 12519"@en .
+
+setempw:Frame_Height
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+    tempo:definitionInLanguage "the vertical distance between the ground and the lowest point on the frame"@en ;
+    rdfs:label "frame height"@en .
+
+setempw:Thermal_Transmittance
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/ThermalTransmittance> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/W-PER-M2-K> ;
+    tempo:definitionInLanguage "is determined by using tabulated values from EN ISO 10077-1, table F.1 or table F.3, by calculation using EN ISO 10077-1 and EN ISO 10077-2 or by hot box method using EN ISO 12567-1 or EN ISO 12567-2"@en ;
+    rdfs:label "thermal transmittance according to EN 14351-1"@en .
+
+setempw:Cutting_Protection 
+    a setemp:Property ;
+    tempo:definitionInLanguage "glazed surfaces shall be designed to limit the risk of people cutting themselves"@en ;
+    rdfs:label "protection against cutting according to Boverket's Buildings Regulations"@en .
+
+setempw:Burglar_Resistance
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme burglarresistance:BurglarResistanceScheme ;
+    tempo:definitionInLanguage "class according to the burglary protection requirements for buildings and premises"@en ;
+    rdfs:label "burglar resistance according to SSF 200:6 (class)"@en .
+
+setempw:Interior_Colour 
+    a setemp:Property ;
+    tempo:definitionInLanguage "colour of the interior finish"@en ;
+    rdfs:label "finish colour - interior"@en .
+
+setempw:Exterior_Colour 
+    a setemp:Property ;
+    tempo:definitionInLanguage "colour of the exterior finish"@en ;
+    rdfs:label "finish colour - exterior"@en .
+
+setempw:Frame_Depth
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+    tempo:definitionInLanguage "the distance between the top and bottom or front and back surface of the frame"@en ;
+    rdfs:label "frame depth"@en .
+
+setempw:Exterior_Reveal_Depth
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+    tempo:definitionInLanguage "the distance from the outer edge of an opening's frame to the external face of the building's facade"@en ;
+    rdfs:label "exterior reveal depth"@en .
+
+setempw:Jamb_Extension_Groove
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme jambextension:JambExtensionScheme ;
+    tempo:definitionInLanguage "slot or channel in a door or window frame where the jamb extension or window reveal can be inserted and secured"@en ;
+    rdfs:label "jamb extension groove"@en .
+
+setempw:Gross_Weight
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+    tempo:definitionInLanguage "total weight without deduction for tare, tret, or waste"@en ;
+    rdfs:label "gross weight"@en .
+
+setempw:Net_Weight
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Mass> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/KiloGM> ;
+    tempo:definitionInLanguage "weight, or mass, of the goods themselves without any packaging"@en ;
+    rdfs:label "net weight"@en .
+
+setempw:Opening_Width
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Length> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/MilliM> ;
+    tempo:definitionInLanguage "the width of the void within a wall or partition designed to receive a window or door set"@en ;
+    rdfs:label "structural opening width according to EN 12519"@en .
+
+setempw:Opening_Direction
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme openingdirection:OpeningDirectionScheme ;
+    tempo:definitionInLanguage "the course or line along which a space or gap that allows passage or access lies"@en ;
+    rdfs:label "opening direction"@en .
+
+setempw:Light_Transmittance
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Transmittance> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
+    tempo:definitionInLanguage "determines the transmitted fraction of the incident solar radiation in the visible part of the solar spectrum"@en ;
+    rdfs:label "light transmittance according to EN 14351-1"@en .
+
+setempw:Solar_Energy_Transmittance
+    a setemp:Property ;
+    setemp:expectsValueType setemp:QuantitativeValue ;
+    tempo:hasQuantityKind <http://qudt.org/vocab/quantitykind/Transmittance> ;
+    tempo:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
+    tempo:definitionInLanguage "it is calculated as the sum of the solar direct transmittance and the secondary heat transfer factor of the material towards the inside"@en ;
+    rdfs:label "total solar energy transmittance according to EN 14351-1"@en .
+
+setempw:Sound_Insulation
+    a setemp:Property ;
+    tempo:definitionInLanguage "shall be determined by test according to EN ISO 140-3. as an alternative, the sound insulation of single window with IGUs can be determined by using tabulated values. the results shall be expressed in accordance with EN ISO 717-1"@en ;
+    rdfs:label "airborne sound insulation according to EN 14351-1"@en .
+
+setempw:Rotational_Direction
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme rotationaldirection:RotationalDirectionScheme ;
+    tempo:definitionInLanguage "movement of a hinged or pivoted casement window or door leaf around its fixing either clockwise or counter-clockwise"@en ;
+    rdfs:label "direction of rotation according to EN 12519"@en .
+
+setempw:Fire_Resistance
+    a setemp:Property ;
+    setemp:expectsValueType setemp:ControlledValue ;
+    setemp:expectsScheme fireresistance:FireResistanceScheme ;
+    tempo:definitionInLanguage "assessment of the characteristic loadbearing capacity and/or integrity and/or insulation. also further optional characteristics, namely radiation, mechanical aspects, self-closing ability and smoke leakage"@en ;
+    rdfs:label "resistance to fire according to EN 13501-2"@en .
+

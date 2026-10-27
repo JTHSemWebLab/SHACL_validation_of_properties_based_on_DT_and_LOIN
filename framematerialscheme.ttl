@@ -1,0 +1,55 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix framematerial:  <https://example.org/framematerialscheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+framematerial:FrameMaterialScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "List of frame materials for a window"@en ;
+    rdfs:label "Frame material"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+framematerial:PVC
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "PVC" .
+
+framematerial:Timber
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Timber" .
+
+framematerial:Unplasticized_PVC
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Unplasticized PVC" .
+
+framematerial:Timber_With_AluClad
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Timber with aluclad" .
+
+framematerial:Biocomposite
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Biocomposite" .
+
+framematerial:Steel
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Steel" .
+
+framematerial:Aluminium
+    a skos:Concept ;
+    skos:inScheme framematerial:FrameMaterialScheme ;
+    skos:notation "Aluminium" .
+

@@ -1,0 +1,210 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/shapes/BurglarResistanceShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Burglar_Resistance> ;
+            sh:property [ sh:hasValue <https://example.org/burglarresistancescheme#BurglarResistanceScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/CuttingProtectionShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path <https://example.org/setempw#Cutting_Protection> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/ExteriorColourShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path <https://example.org/setempw#Exterior_Colour> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/ExteriorRevealDepthShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Exterior_Reveal_Depth> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/FireResistanceShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Fire_Resistance> ;
+            sh:property [ sh:hasValue <https://example.org/fireresistancescheme#FireResistanceScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/FrameDepthShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Frame_Depth> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/FrameHeightShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Frame_Height> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/FrameMaterialShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Frame_Material> ;
+            sh:property [ sh:hasValue <https://example.org/framematerialscheme#FrameMaterialScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/GrossWeightShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/KiloGM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Gross_Weight> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/InteriorColourShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path <https://example.org/setempw#Interior_Colour> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/JambExtensionShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Jamb_Extension_Groove> ;
+            sh:property [ sh:hasValue <https://example.org/jambextensionscheme#JambExtensionScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/LightTransmittanceShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/UNITLESS> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Light_Transmittance> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/NetWeightShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/KiloGM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Net_Weight> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/OpeningDirectionShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Opening_Direction> ;
+            sh:property [ sh:hasValue <https://example.org/openingdirectionscheme#OpeningDirectionScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/OpeningWidthShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/MilliM> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Opening_Width> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/RotationalDirectionShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Rotational_Direction> ;
+            sh:property [ sh:hasValue <https://example.org/rotationaldirectionscheme#RotationalDirectionScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/SolarEnergyTransmittanceShape> a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:node [ sh:class <https://example.org/setemp#QuantitativeValue> ;
+                    sh:property [ sh:datatype xsd:decimal ;
+                            sh:maxCount 1 ;
+                            sh:minCount 1 ;
+                            sh:path <http://qudt.org/schema/qudt/numericValue> ],
+                        [ sh:hasValue <http://qudt.org/vocab/unit/UNITLESS> ;
+                            sh:path <http://qudt.org/schema/qudt/unit> ] ] ;
+            sh:path <https://example.org/setempw#Solar_Energy_Transmittance> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/SoundInsulationShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:path <https://example.org/setempw#Sound_Insulation> ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+
+<http://example.org/shapes/WindowTypeShape> a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/setempw#Window_Type> ;
+            sh:property [ sh:hasValue <https://example.org/windowtypescheme#WindowTypeScheme> ;
+                    sh:path skos:inScheme ] ] ;
+    sh:targetClass <https://example.org/setempw#Window> .
+

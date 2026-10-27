@@ -1,0 +1,39 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix burglarresistance:  <https://example.org/burglarresistancescheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+burglarresistance:BurglarResistanceScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "List of burglar resistance classes according to SSF 200:6"@en ;
+    rdfs:label "Burglar Resistance classes"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+burglarresistance:Protection_Class_1
+    a skos:Concept ;
+    skos:inScheme burglarresistance:BurglarResistanceScheme ;
+    skos:notation "protection class 1" .
+
+burglarresistance:Protection_Class_2
+    a skos:Concept ;
+    skos:inScheme burglarresistance:BurglarResistanceScheme ;
+    skos:notation "protection class 2" .
+
+burglarresistance:Protection_Class_3
+    a skos:Concept ;
+    skos:inScheme burglarresistance:BurglarResistanceScheme ;
+    skos:notation "protection class 3" .
+
+
+
+
+

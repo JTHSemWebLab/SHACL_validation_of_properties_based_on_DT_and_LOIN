@@ -1,0 +1,34 @@
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rotationaldirection:  <https://example.org/rotationaldirectionscheme#> .
+
+
+#################################################################
+# SCHEME DEFINITION
+#################################################################
+
+rotationaldirection:RotationalDirectionScheme
+    a skos:ConceptScheme ;
+    rdfs:comment "Direction of rotation according to EN 12519"@en ;
+    rdfs:label "direction of rotation"@sv .
+
+#################################################################
+# CONCEPTS
+#################################################################
+
+rotationaldirection:Left_Hand_Opening
+    a skos:Concept ;
+    skos:inScheme rotationaldirection:RotationalDirectionScheme ;
+    skos:notation "left hand opening" .
+
+rotationaldirection:Right_Hand_Opening
+    a skos:Concept ;
+    skos:inScheme rotationaldirection:RotationalDirectionScheme ;
+    skos:notation "right hand opening" .
+
+
+
+
+
