@@ -9,4 +9,5 @@ assembler script - assembles selected_shapes from the shapes bank based on the c
 selected_shapes - assembled SHACL shapes based on chosen requirement set <br/>
 validator script - validates a dataset (example included in repository) against selected_shapes <br/>
 example dataset - example for testing <br/>
-various schemes - SKOS-schemes for specific properties
+various schemes - SKOS-schemes for specific properties <br/>
+run_query - contains queries for competency questions, along with a script to run them
